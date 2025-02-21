@@ -233,6 +233,9 @@ module.exports = function (webRouter, privateApiRouter, publicApiRouter) {
       return staticFilesBase + path
     }
 
+    res.locals.welcomeMsg = process.env.WELCOME_MESSAGE || '<p>Welcome to this Overleaf instance!</p>'
+    res.locals.loginBtnText = process.env.LOGIN_BUTTON_TEXT || 'Login'
+
     next()
   })
 

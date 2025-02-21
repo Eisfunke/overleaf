@@ -10,9 +10,5 @@ block content
 							h1 #{translate("log_in")}
 						.card-body.text-center
 							p
-								| Willkommen auf dem Overleaf von&nbsp;
-								a(href="https://fachschaften.org ") fachschaften.org!
-							p
-								| Hier kannst du kollaborativ an LaTeX-Dokumenten arbeiten.
-								| Zur Nutzung brauchst du einen fachschaften.org-Account.
-							a.btn.btn-primary.mt-2(href="/login/oidc", role="button") fachschaften.org-Login
+								!= welcomeMsg
+							a.btn.btn-primary.mt-2(href="/login/oidc", role="button") #{loginBtnText}
